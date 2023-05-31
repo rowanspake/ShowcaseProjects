@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\aspnetcore-publish-to-azure-assn.props" />
-</Project>
