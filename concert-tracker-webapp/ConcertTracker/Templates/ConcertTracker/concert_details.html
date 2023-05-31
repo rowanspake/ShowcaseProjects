@@ -1,0 +1,11 @@
+{% extends 'concert_base.html' %}
+{% load static %}
+{% block title %}Concert Details{% endblock %}
+{% block content %}
+	<h3>Your Selected Concert:</h3>
+	<div id="details-div">
+		<p>
+			{{ item.concert_name }} is playing at {{ item.venue }} on {{item.concertDate}}
+		</p>
+	</div>
+{% endblock %}

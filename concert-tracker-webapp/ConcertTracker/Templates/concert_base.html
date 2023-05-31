@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static '/CSS/ConcertTrackerStylesheet.css' %}">
+		<title>{% block title%}{% endblock %}</title>
+	</head>
+	<header>
+		<div class="">
+	        <a href="{% url 'addConcert' %}">Add a new concert</a> | <a href="{% url 'upcomingConcerts' %}">View upcoming concerts</a> | <a href="{% url 'my_concerts' %}">View your concerts</a>
+		</div>
+	</header>
+	<body>
+		<div class="">
+			{% block content %}{% endblock %}
+			<br><br>
+		</div>
+		<footer>
+			<i>Rowan Spake</i> for <i>The Tech Academy</i> circa 2023
+		</footer>
+	</body>
+</html>

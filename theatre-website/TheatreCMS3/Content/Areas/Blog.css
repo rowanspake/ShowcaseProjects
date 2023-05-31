@@ -1,0 +1,261 @@
+﻿/* ▼ This ▼ is for you to easily reference the colors on the Site.css page */
+/* Do not uncomment these color variables */
+
+/* CSS color variables */
+/*:root { /* Color palette for css */
+/* --main-color: #BD1A11;  Red */
+/*--main-color--light: #F04D44;*/ /* Red, a shade lighter */
+/*--secondary-color: #D6972A;*/ /* Yellow gold */
+/*--light-color: #FFFBFB;*/ /* White */
+/*--dark-color: #000000;*/ /* Black */
+/*--secondary-color--dark: #9D7C39;*/ /* Dark Gold */
+/*}*/
+
+.BlogAuthors-Create--ellie-form {
+    background-color: var(--main-color--light);
+    width: 700px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+.BlogAuthors-Create--ellie-container {
+    display: flex;
+    flex-direction: row; 
+}
+
+.BlogAuthors-Edit--ellie-form {
+    background-color: var(--main-color--light);
+    width: 700px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+.BlogAuthors-Edit--ellie-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#BlogAuthors-DetailsDelete--SocialLinks {
+    color: var(--dark-color);
+    text-decoration: none;
+    line-height: inherit; 
+}
+
+.BlogAuthors-DetailsDelete--icons {
+    float: right;
+}
+
+.BlogAuthors-DetailsDelete--CardDim {
+    max-width: 540px;
+}
+
+.BlogAuthors-DetailsDelete--CardBodyDim {
+    min-height: 12rem;
+}
+
+.BlogAuthors-DetailsDelete--TopButtons:focus {
+    background-color: green !important;
+    border-color: green !important;
+}
+
+.BlogAuthors-DetailsDelete--Dim {
+    height: 100%;
+    width: 12em;
+}
+
+.BlogAuthors-DetailsDelete--TextBlack {
+    color: var(--dark-color);
+}
+
+.BlogAuthors-DetailsDelete--TextBold {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.BlogAuthors-DetailsDelete--LeftDate {
+    float: right;
+}
+
+.BlogAuthors-DetailsDelete--JoinedDate {
+    float: left;
+}
+
+.BlogAuthors-DetailsDelete--TrashBtn {
+    float: right;
+}
+
+
+.BlogPost-CreateEdit-btn {
+    border: 2px solid var(--secondary-color);
+    border-radius: 9px;
+    background-color: var(--main-color);
+}
+
+.BlogPost-CreateEdit-btn:hover {
+    display: inline-flex;
+}
+
+.BlogPost-CreateEdit-midTop {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.BlogPost-CreateEdit-midBot {
+    text-align: center;
+}
+
+.BlogPost-CreateEdit-Form {
+    border: solid 2px var(--secondary-color);
+    background-color: var(--main-color--light);
+    align-content: center;
+    margin: 0, auto;
+    justify-content: center;
+    padding-left: 150px;
+}
+
+.BlogPost-CreateEdit-center {
+    block-size: auto;
+}
+
+.BlogPost-CreateEdit-Date:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--main-color);
+    background-color: var(--secondary-color);
+}
+
+.BlogPost-CreateEdit-Text:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--main-color);
+    background-color: var(--secondary-color);
+}
+
+.BlogPost-CreateEdit-BacktoList-btn {
+    margin-top: 0;
+    padding: 10px 7px;
+    border: solid 2px var(--main-color);
+    border-radius: 9px;
+    background-color: var(--secondary-color);
+    letter-spacing: 1px;
+}
+
+.BlogPost-CreateEdit-BacktoList-btn:hover {
+    background-color: var(--secondary-color--dark);
+    border-color: var(--main-color);
+}
+
+
+/* CSS Styling for Comments */
+
+.Comment-Index--Container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.Comment-Index--commentSection {
+    margin-top: 20px;
+}
+
+.Comment-partialComments--Container {
+    background-color: var(--light-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.Comment-partialComments--Header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--light-color);
+}
+
+    .Comment-partialComments--Header p:first-child {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .Comment-partialComments--Header p:last-child {
+        display: inline-block;
+        color: var(--secondary-color--dark);
+    }
+
+.Comment-partialComments--Body {
+    margin-bottom: 10px;
+    color: var(--light-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.Comment-partialComments--Buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .Comment-partialComments--Buttons button {
+        margin-right: 10px;
+    }
+
+BlogPost-Index--img {
+    width: 570px;
+}
+
+.BlogPost_Index--card-title {
+    color: black;
+    padding-right: 10px;
+    text-align: center;
+    display: block;
+    text-indent: 200px;
+}
+
+.BlogPost-Index--card-text {
+    color: black;
+    padding-left: 160px;
+    text-align: center;
+    text-indent: 20px;
+}
+
+.BlogPost-Index--card-time {
+    color: black;
+    padding-left: 200px;
+    text-align: center;
+}
+
+.BlogPost-Index--H4 {
+    text-align: center;
+    color: black;
+    padding-left: 190px;
+}
+
+.BlogPost-Index--bot-right {
+    float: right;
+    font-size: 12px;
+    overflow: auto;
+    padding-top: 70px;
+}
+
+.BlogPost-Index--btn {
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 70px;
+    height: 35px;
+    line-height: 30px;
+    margin: 0 4px;
+}
+
+/*.BlogPost-Index--card mb-3 {
+}
+
+.BlogPost-Index--row no-gutters {
+}
+
+.BlogPost-Index--col-md-4 {
+}
+
+.BlogPost-Index--col-md-8 {
+}
+
+.BlogPost-Index--card-body {
+}*/

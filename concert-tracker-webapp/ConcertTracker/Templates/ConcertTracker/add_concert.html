@@ -1,0 +1,12 @@
+{% extends 'concert_base.html' %}
+{% block title %}Add a Concert{% endblock %}
+{% block content %}
+	<h3>Add a new concert</h3>
+	<div id="form-div">
+		<form method="POST">
+			{% csrf_token %}
+            {{form.as_p}}
+			<button id="new-concert-button" type="submit" name="Save_Concert">Save Concert</button>
+		</form>
+	</div>
+{% endblock %}

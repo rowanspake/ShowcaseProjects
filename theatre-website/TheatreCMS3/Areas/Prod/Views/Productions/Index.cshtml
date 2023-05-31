@@ -1,0 +1,100 @@
+﻿@model IEnumerable<TheatreCMS3.Areas.Prod.Models.Production>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Playwright)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Runtime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpeningDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClosingDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShowTimeEvening)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShowTimeMatinee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Season)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorldPremiere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentlyShowing)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Playwright)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Runtime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpeningDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClosingDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShowTimeEvening)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShowTimeMatinee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Season)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorldPremiere)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentlyShowing)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductionId })
+        </td>
+    </tr>
+}
+
+</table>

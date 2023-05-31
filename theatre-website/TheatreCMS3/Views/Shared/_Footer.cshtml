@@ -1,0 +1,44 @@
+﻿@using TheatreCMS3.Models
+
+<footer>
+  <div class="float-left footer-content">
+
+    <div class="float-left footer-icons">
+      <span>
+        <i class="fab fa-facebook-f fa-2x"></i> &nbsp;
+        <i class="fab fa-youtube fa-2x"></i> &nbsp;
+        <i class="fab fa-twitter fa-2x"></i>
+      </span>
+    </div>
+    <div class="footer-links">
+      @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "float-left" })
+      @*<a class="float-left" href="#">About</a> added action link above *@
+      @*<a class="float-right" href="3">Contact</a> added action link below *@
+      @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "float-right" })
+    </div>
+    <p class="footer-address">
+      2110 SE 10th Ave
+      <br />
+      Portland, OR 97214
+      <br />
+      (503) 482-8655
+    </p>
+    <p class="footer-lcopyright">
+      <i class="far fa-copyright"></i>
+      &copy;
+    </p>
+  </div>
+
+  <div class="float-right footer-rcontent">
+    <span>
+      <i class="fab fa-facebook-f fa-2x"></i> &nbsp;
+      <i class="fab fa-youtube fa-2x"></i> &nbsp;
+      <i class="fab fa-twitter fa-2x"></i>
+    </span>
+    <p class="footer-copyright">
+      <i class="far fa-copyright"></i>
+      2021
+    </p>
+  </div>
+
+</footer>

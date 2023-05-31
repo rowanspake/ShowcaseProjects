@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Donate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-image : url('/Content/images/theater.jpg'); background-size:cover; height:150px; width:1000px; margin:20px; ">
+<h1 class="home-donate-h1">Consider Making a Donation!</h1>
+</div>
+
+<div class="home-donate-container">
+
+<form class="home-donate-form">
+ 
+    <div class="home-donate-form">
+        <label for="home-donate-label">Name*</label>
+        <input type="text" class="home-donate-label" placeholder="First Name" />
+        <input type="text" class="home-donate-label" placeholder="Last Name" />
+    </div>
+
+    <div class="home-donate-form">
+        <label for="home-donate-form">Email Address*</label>
+        <input type="text" class="form-control" placeholder="name@example.com" />
+    </div>
+
+    <div class="home-donate-form">
+        <label for="home-donate-form">Address</label>
+        <input type="text" class="form-control" placeholder="Address" />
+    </div>
+
+    <div class="home-donate-form">
+        <label for="home-donate-form">Donation Amount($)*</label>
+        <input type="text" class="form-control" placeholder="Donation Amount" />
+    </div>
+
+    <div class="home-donate-form">
+        <label for="donateformmessage">Message*</label>
+        <textarea class="form-control" rows="6" placeholder="Please Comment Here...">Donation Comments: </textarea>
+    </div>
+
+    <input type="submit" class="home-donate-submit" value="Submit" />
+
+</form>
+
+</div>

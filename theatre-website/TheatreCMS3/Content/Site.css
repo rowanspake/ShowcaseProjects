@@ -1,0 +1,683 @@
+﻿/* CSS color variables */
+:root {
+    /* Color palette for css */
+    --main-color: #bd1a11; /* Red */
+    --main-color--light: #f04d44; /* Red, a shade lighter */
+    --secondary-color: #d6972a; /* Yellow gold */
+    --secondary-color--dark: #9d7c39; /* Dark Gold */
+    --light-color: #fffbfb; /* White */
+    --dark-color: #000000; /* Black */
+}
+
+/*Use these classes to easily assign one of the variable colors to an element*/
+/*Text color classes*/
+
+.cms-text-main {
+  color: var(--main-color);
+}
+
+.cms-text-main-light {
+  color: var(--main-color--light);
+}
+
+.cms-text-secondary {
+  color: var(--secondary-color);
+}
+
+.cms-text-secondary-dark {
+  color: var(--secondary-color--dark);
+}
+
+.cms-text-light {
+  color: var(--light-color);
+}
+
+.cms-text-dark {
+  color: var(--dark-color);
+}
+/*End color classes*/
+
+/*Background color classes*/
+.cms-bg-main {
+  background-color: var(--main-color);
+}
+
+.cms-bg-main-light {
+  background-color: var(--main-color--light);
+}
+
+.cms-bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.cms-bg-secondary-dark {
+  background-color: var(--secondary-color--dark);
+}
+
+.cms-bg-light {
+  background-color: var(--light-color);
+}
+
+.cms-bg-dark {
+  background-color: var(--dark-color);
+}
+/*End background color classes*/
+
+body {
+  background-color: var(--dark-color);
+  color: var(
+    --light-color
+  ); /*This should default all text to the white of the site.*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
+*/
+.dl-horizontal dt {
+  white-space: normal;
+}
+
+/* Styling and positioning for the Navbar */
+
+.nav > li {
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.nav > li:hover {
+  background-color: var(--light-color);
+  border-radius: 0.25rem;
+  color: var(--secondary-color);
+}
+
+.nav > li > a {
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+.navbar-icon-red {
+  height: 42px;
+  width: auto;
+}
+
+.navbar {
+  background-color: var(--main-color);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  /* make text inside black */
+  color: black !important;
+}
+
+.navbar-light navbar-toggler {
+  /* removing hamburger's border the hard way */
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.navbar--hamburger {
+  /* hiding in desktop mode */
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  /* fixing navbar elements only within the mobile view */
+  .nav-item {
+    /* hiding regular nav in mobile */
+    display: none;
+  }
+
+  .navbar--hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .navbar--hamburger .nav-item {
+    display: block;
+  }
+
+  .navbar-toggler {
+    display: block;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: -19px;
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    top: 30px;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    background-color: var(--secondary-color);
+    border-radius: 0.25rem;
+  }
+
+  .navbar-nav .nav-item .navbar-hamburger--navitem {
+    text-align: left;
+  }
+
+  .navbar-nav .nav-link .navbar-hamburger--navlink {
+    margin-bottom: 1px;
+    padding: 5px;
+  }
+
+  .dropdown-menu .navbar-hamburger--dropdownmenu {
+    border: none;
+  }
+
+  .dropdown-item .navbar-hamburger--drowndownitem {
+    border-radius: 0.25rem;
+  }
+}
+
+#navdropRight {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #navdropRight {
+    display: block;
+    position: relative;
+  }
+
+  .drpbtnRight .nav-link {
+    display: none;
+  }
+
+  #dropIcon {
+    font-size: 2em;
+    color: var(--secondary-color);
+  }
+
+  #navdropRight .dropdown-menu {
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: black;
+    font-weight: 900;
+    right: 0;
+  }
+
+  #navdropRight .dropdown-item {
+    font-weight: bold;
+  }
+}
+
+h1.CMS-text-bigger {
+  text-align: center;
+  font-size: 75px;
+}
+
+a.CMS-text-bigger {
+  font-size: 36px;
+}
+
+
+
+/* Additional Styling for the Navbar dropdown menu to override the default bootstrap color schema */
+.nav-link.active,
+.nav-pills .show > .nav-link {
+  color: var(--dark-color);
+  background-color: var(--secondary-color);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--dark-color);
+  background-color: #deb887;
+}
+
+/* Navbar dropdown menu background color*/
+.dropdownbckgrndclr {
+  background-color: var(--secondary-color);
+}
+/*Navbar dropdown menu text color*/
+.dropdowntxt {
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+/*----- End Styling for Navbar -------*/
+
+
+/*-----Styling for _Footer.cshtml-----*/
+
+footer {
+  margin-top: auto;
+}
+
+/*content on left side*/
+.footer-content {
+  padding-top: 120px;
+  padding-left: 30px;
+}
+
+/*content on right side*/
+.footer-rcontent {
+  display: none;
+}
+
+.footer-links {
+  height: 24px;
+  /*height has to be entered manually due to floating elements*/
+  /*ensures padding/margin relative to other elements responds as expected    */
+}
+
+.footer-address {
+  padding-top: 8px;
+  line-height: 20px;
+}
+
+/*copyright when it appears on left for small devices*/
+.footer-copyright {
+  width: 115px;
+  text-align: right;
+  position: relative;
+}
+
+/*copyright when it apears on right for large devices*/
+.footer-lcopyright {
+  width: 115px;
+  position: relative;
+}
+
+/*icons and copyright on left disappear on large devices*/
+@media only screen and (min-width: 500px) {
+  .footer-icons {
+    display: none;
+    
+  }
+
+  .footer-lcopyright {
+    display: none;
+  }
+
+  .footer-content {
+    padding-left: 100px;
+  }
+
+  .footer-rcontent {
+    display: unset;
+    padding-top: 140px;
+    padding-right: 100px;
+  }
+}
+/*-----End of Styling for _Footer.cshtml-----*/
+
+/* LOGIN PAGE */
+.formContainer {
+  margin: 10% auto;
+  width: 750px;
+  background-color: var(--secondary-color--dark);
+  border: ridge 10px;
+  border-color: var(--main-color--light);
+  box-shadow: inset var(--dark-color) 1px 2px 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .formContainer {
+    width: 100%;
+  }
+}
+
+#loginForm {
+  margin: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 100%;
+  color: var(--light-color);
+}
+
+.LoginButton > .btn-warning {
+  background-color: var(--secondary-color);
+  border: outset 2px;
+  border-color: var(--main-color--light);
+  font-weight: bold;
+  box-shadow: var(--dark-color) 0.8px 0.8px 5px;
+}
+
+.LoginButton > .btn-warning:hover {
+  background-color: #b57b16;
+  border: inset 2px;
+  border-color: var(--main-color);
+  box-shadow: inset var(--dark-color) 1px 1px 5px;
+}
+
+/* REGISTER PAGE */
+
+/* Style form with smaller size, centered element, discerning background, shape, and shadow */
+.Register-form {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px var(--secondary-color), -1px -1px 0px var(--light-color);
+}
+
+/* Center align headings and format color and spacing */
+.Register-heading2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 50px;
+}
+
+/* Center align headings and format color and spacing */
+.Register-heading4 {
+  color: var(--secondary-color);
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* Allow elements to fill entire form and be centered */
+.Register-div {
+    padding: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Change background color of input fields */
+.Register-input {
+  background-color: white;
+  border: 2px solid black;
+}
+
+/* Hover effects for input fields */
+.Register-input:hover {
+  box-shadow: 0px 0px 10px var(--secondary-color--dark);
+}
+
+/* Style submit button */
+.Register-button {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Button hover effect */
+.Register-button:hover {
+  box-shadow: 0px 0px 5px var(--light-color);
+}
+
+#dropdownMenu2 {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+
+/* Inputs: focus versus non-focus effects */
+
+.Register-input input[type="text"],
+.Register-input input[type="date"],
+.Register-input input[type="time"],
+.Register-input input[type="number"] {
+  border: 2px solid var(--dark-color);
+  background-color: lightgray !important; /* Overriding bootstrap styles for these form items */
+}
+
+    .Register-input input[type="text"]:focus,
+    .Register-input input[type="date"]:focus,
+    .Register-input input[type="time"]:focus,
+    .Register-input input[type="number"]:focus {
+        border: 2px solid var(--secondary-color);
+        background: var(--light-color) !important;
+}
+
+.home-signin--container p {
+    background-color: var(--main-color);
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    height: 25px;
+    overflow: hidden;
+}
+
+#PersonList {
+    column-count: 4;
+    gap: 0px;
+    column-rule-width: 0px;
+}
+
+
+.home-contact-form {
+    width: 40%;
+}
+
+.home-contact-body {
+    background-color: var(--main-color--light);
+    align-content: center;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.home-contact-header {
+    padding: 60px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-family: Broadway;
+}
+
+.home--contact--donate {
+    font-family: Broadway;
+    position: relative;
+    top: -350px;
+    right: -600px;
+}
+
+.home--contact--volunteer {
+    font-family: Broadway;
+    position: relative;
+    top: -270px;
+    right: -600px;
+}
+
+
+/* ABOUT PAGE */
+
+
+
+.Home-About-text-bigger {
+    font-size: 75px;
+    text-align: center;
+    font-family: fantasy;
+    
+}
+
+.Home-About-text {
+    text-align: center;
+    font-family: fantasy;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: var(--main-color);
+}
+
+.Home-About-Background-img {
+    background-position: center top;/*This is the theatre image for about page*/
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    background-color: var(--main-color--light);
+    z-index: -1;
+}
+.Home-About-Background {
+    background-color: var(--main-color--light);
+    width: 100%;
+}
+
+.Home-About-container {
+    position:relative;
+    text-align:center;
+    color:white;
+    font-family: fantasy;
+}
+
+.Home-About-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+}
+.
+.Home-About-centered-cast {
+    left: 50%;
+    right: 50%;
+    position:center;
+    display: inline-block;
+    align-content:center;
+}
+
+.Home-About-p {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.Home-About-image-cropper {
+   
+    padding: 10px;
+    border-radius: 70%;
+}
+.Home-About-img {
+    max-height: 200px;
+    min-width: 200px;
+    object-fit: cover;
+    display: inline block;
+    margin: auto;
+    align-content: center;
+   
+    
+    display: flex;
+}
+.Home-About-ul {
+    display: flex;
+    flex-wrap:wrap;
+    
+    /* as the name shows, this will wrap the image*/
+    
+    
+}
+.Home-About-li {
+     
+     
+     /*This gets rid of the bullets */
+     list-style: none;
+     
+
+}
+.Home-About-body {
+    height: 50%;
+    margin: 0;
+}
+
+.home-donate-container{
+    border-radius: 36px;
+    background-color: var(--main-color--light);
+    padding: 40px;
+    margin: 20px;
+}
+
+.home-donate-form{
+     border-radius: 12px 12px 12px 12px;
+     margin: 8px;
+     padding: 3px;
+}
+
+.home-donate-label{
+    margin: 10px;
+}
+
+.home-donate-submit {
+    width: 10%;
+    padding: 14px 14px 14px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    float: inline-end;
+    margin: 10px;
+    border: none;
+}
+
+.home-donate-label {
+    width: 100%;
+    border-radius: 4px 4px 4px 4px ;
+    margin: 6px;
+    padding: 5px;
+    border:none;
+}
+
+.home-donate-h1{    
+    margin: 60px;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(40%, -50%);
+}
+
+
+/* Home INDEX Styling */
+.home-index--main_logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 4em;
+    padding-bottom: 6em;
+}
+
+.home-index--column_1 {
+    float: left;
+    width: 67%; /*this ensures the colummn takes up 2/3 the page width */
+    padding: 5%;
+}
+
+.home-index--column_2 {
+    float: left;
+    width: 33%;
+    padding: 5%;
+}
+
+.home-index--posters {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.home-index--donations_btn {
+    background-color: var(--main-color);
+    color: var(--light-color);
+    padding: 5%;
+    margin-left: 10%;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.home-index--sponsors {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.home-index--hr {
+    float: left;
+    height: 5px;
+    width: 6em;
+    border-width: 0;
+    background-color: var(--main-color);
+}

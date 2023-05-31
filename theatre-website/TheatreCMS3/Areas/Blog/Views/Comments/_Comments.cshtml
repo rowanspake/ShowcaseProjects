@@ -1,0 +1,56 @@
+﻿@model IEnumerable<TheatreCMS3.Areas.Blog.Models.Comment>
+
+@foreach (var comment in Model)
+{
+    <div id="comment-@comment.CommentId">
+        <div class="Comment-partialComments--Header">
+            <p>@comment.Author</p>
+            <p>@comment.TimeSinceCreation()</p>
+        </div>
+        <div class="Comment-partialComments--Body">
+            <p>@comment.Message</p>
+        </div>
+        <div class="Comment-partialComments--Buttons">
+            <button type="button" class="btn btn-danger" onclick="likeComment('@comment.CommentId')">
+                <span class="fa fa-thumbs-up"></span> <span id="likes-@comment.CommentId">@comment.Likes</span>
+            </button>
+            <button type="button" class="btn btn-danger" onclick="dislikeComment('@comment.CommentId')">
+                <span class="fa fa-thumbs-down"></span> <span id="dislikes-@comment.CommentId">@comment.Dislikes</span>
+            </button>
+            <button type="button" class="btn btn-danger">
+                <i class="fa fa-reply"></i>
+            </button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal-@comment.CommentId">
+                <i class="fa fa-trash"></i>
+            </button>
+        </div>
+        <div class="modal fade" id="confirmDeleteModal-@comment.CommentId" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel-@comment.CommentId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmDeleteModalLabel-@comment.CommentId">Confirm Deletion</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this comment?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteComment('@comment.CommentId')">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span id="percentage-likes-@comment.CommentId" class="text-success">@string.Format("{0:F0}% Likes", comment.LikeRatio())</span>
+            <span class="text-primary">@string.Format(" | ")</span>
+            <span id="percentage-dislikes-@comment.CommentId" class="text-danger">@string.Format("{0:F0}% Dislikes", 100 - comment.LikeRatio())</span>
+        </div>
+        <div class="progress w-25">
+            <div id="like-progress-bar-@comment.CommentId" class="progress-bar bg-success" role="progressbar" style="@string.Format("width: {0}%", comment.LikeRatio())" aria-valuenow="@comment.Likes" aria-valuemin="0" aria-valuemax="@comment.Likes + @comment.Dislikes"></div>
+            <div id="dislike-progress-bar-@comment.CommentId" class="progress-bar bg-danger" role="progressbar" style="@string.Format("width: {0}%", 100 - comment.LikeRatio())" aria-valuenow="@comment.Dislikes" aria-valuemin="0" aria-valuemax="@comment.Likes + @comment.Dislikes"></div>
+        </div>
+    </div>
+}

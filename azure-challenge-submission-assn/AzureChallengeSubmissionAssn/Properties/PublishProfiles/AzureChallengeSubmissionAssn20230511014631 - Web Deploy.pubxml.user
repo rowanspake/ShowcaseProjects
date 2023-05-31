@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6MKE1AlZQEar/ljSBTfU4QAAAAACAAAAAAAQZgAAAAEAACAAAABQ3W0mDgmRPwO5zTbMNQ+nyWQvPanQlQiQtbrNZuOBmAAAAAAOgAAAAAIAACAAAAAZloYFSdvtCA+KKUSPIHvhWlhWRcEVaipwbl0U5Tc4AIAAAABFD1Gu0qk6fi01nyOM6IbeqQOmpqIEX3IXMybURW4TpcgcXCnu71pHZ1dC3e6WoSgp27IAm/bpIMGeU2FJuKiU0zygK6OQYyl+C8EIr5SEHAZ1qpcKwXOp7wJe6erRXK0ySMGdmbqQiZDueBGSLGdKTOczHzzXkYe3u9+nuHWa40AAAABTCF/lTX+mUijAsEWDTvOAa6DDvbnm5iF3oKHwdOJGX/GGZ/mBQNVlYh5Z2WJd8CpVhMaFmweJPTCpdhPhFJuF</EncryptedPassword>
+    <History>True|2023-05-11T09:27:04.2883924Z;True|2023-05-11T02:19:48.2937226-07:00;True|2023-05-11T02:17:38.7846179-07:00;True|2023-05-11T02:14:27.2283677-07:00;True|2023-05-11T02:10:03.8475162-07:00;True|2023-05-11T01:49:16.2396109-07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:aspdotnetcorechallengedbserver.database.windows.net,1433%3bInitial Catalog=AzureChallengeSubmissionAssn_db2%3bUser Id=rowanspake%40aspdotnetcorechallengedbserver%3bPassword=g3t0utMahBelleh!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="AzureChallengeSubmissionAssn.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:aspdotnetcorechallengedbserver.database.windows.net,1433%3bInitial Catalog=AzureChallengeSubmissionAssn_db2%3bUser Id=rowanspake%40aspdotnetcorechallengedbserver%3bPassword=g3t0utMahBelleh!</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

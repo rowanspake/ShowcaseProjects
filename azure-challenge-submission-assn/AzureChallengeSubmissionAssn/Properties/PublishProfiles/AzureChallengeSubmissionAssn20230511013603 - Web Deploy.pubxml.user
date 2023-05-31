@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6MKE1AlZQEar/ljSBTfU4QAAAAACAAAAAAAQZgAAAAEAACAAAAD69CO2Xd4a7Msl43+5x3kFKLn1yumpdodhYr88NKNqVwAAAAAOgAAAAAIAACAAAAAja8rUOfDy0d4yqfDlYCfjoHEO6zlpJszYwR+Y2J9w44AAAAByICDKHc9pSzgu305AV6BFJjCwh+czx4DKG6gl7hRXl6Yke2ndBUqaDlwiJQ+SpCIbAwO8Wng2xqluVJpR0/4yPIADaXUN7EGZMZHgv0LVnbepNSov4PpUnGoya79i1TC194By3ByrekBP6W94Tzdu/DHvROhaZY8qiWdMqy3pp0AAAADdvAWhoGR+X05PBLd+DoCiE27bU3pqqHCTAf5BXQpUFSXmuHFbRRHk9xGoUhfufvxwLI6m2p2IuXq1ZrWjvepd</EncryptedPassword>
+    <History>False|2023-05-11T08:45:32.0759245Z;False|2023-05-11T01:39:39.8734903-07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:aspdotnetcorechallengedbserver.database.windows.net,1433%3bInitial Catalog=AzureChallengeSubmissionAssn_db%3bUser Id=rowanspake%40aspdotnetcorechallengedbserver%3bPassword=g3tBack!nMahBelleh</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="AzureChallengeSubmissionAssn.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:aspdotnetcorechallengedbserver.database.windows.net,1433%3bInitial Catalog=AzureChallengeSubmissionAssn_db%3bUser Id=rowanspake%40aspdotnetcorechallengedbserver%3bPassword=g3tBack!nMahBelleh</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

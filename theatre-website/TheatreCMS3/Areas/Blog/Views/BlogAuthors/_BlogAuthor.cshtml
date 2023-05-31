@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TheatreCMS3.Areas.Blog.Models.BlogAuthor>
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@foreach (var item in Model)
+{
+    <div>
+        <input type="button" value="Author Details" class="BlogAuthors-DetailsDelete--TopButtons btn btn-dark" id="Author" onclick="showAuthor(@item.BlogAuthorId)" />
+        <input type="button" value="Blog Posts" class="BlogAuthors-DetailsDelete--TopButtons btn btn-dark" id="BlogPost" onclick="showBlogPost(@item.BlogAuthorId)" />
+        <input type="button" value="Contact" class="BlogAuthors-DetailsDelete--TopButtons btn btn-dark" id="hide" />
+        <input type="button" value="Twitter" class="BlogAuthors-DetailsDelete--TopButtons btn btn-dark" id="hide" />
+    </div>
+    <div class="card mb-3 BlogAuthors-DetailsDelete--CardDim">
+        <div class="row no-gutters AuthorSection-@item.BlogAuthorId">
+            <div class="col-md-4">
+                <img src="https://picsum.photos/640/360" class="BlogAuthors-DetailsDelete--Dim">
+            </div>
+            <div class="col-md-8">
+                <div class="BlogAuthors-DetailsDelete--icons">
+                    <a href="https://www.facebook.com" class="fa-brands fa-facebook fa-2xl" id="BlogAuthors-DetailsDelete--SocialLinks"></a>
+                    <a href="https://www.instagram.com" class="fa-brands fa-instagram fa-2xl" id="BlogAuthors-DetailsDelete--SocialLinks"></a>
+                </div>
+
+                <div class="card-body BlogAuthors-DetailsDelete--CardBodyDim">
+                    <h5 class="card-title BlogAuthors-DetailsDelete--TextBlack">@Html.DisplayFor(modelItem => item.Name)</h5>
+                    <p class="card-text BlogAuthors-DetailsDelete--TextBlack">@Html.DisplayFor(modelItem => item.Bio)</p>
+                    <div class="BlogAuthors-DetailsDelete--JoinedDate">
+                        <p class="card-text BlogAuthors-DetailsDelete--TextBold">@Html.DisplayNameFor(model => model.Joined)</p>
+                        <p class="card-text BlogAuthors-DetailsDelete--TextBlack">@Html.DisplayFor(modelItem => item.Joined)</p>
+                    </div>
+                    <div class="BlogAuthors-DetailsDelete--LeftDate">
+                        <p class="card-text BlogAuthors-DetailsDelete--TextBold">@Html.DisplayNameFor(model => model.Left)</p>
+                        <p class="card-text BlogAuthors-DetailsDelete--TextBlack">@Html.DisplayFor(modelItem => item.Left)</p>
+                        <a href="@Url.Action("Edit", "BlogAuthors", new { id = item.BlogAuthorId })" class="btn btn-success"><i class="fa fa-address-book-o"></i> Edit</a>
+                        <a href="@Url.Action("Delete", "BlogAuthors", new { id = item.BlogAuthorId })" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*Start of BlogPost Section*@
+        <div class="row no-gutters BlogPostSection-@item.BlogAuthorId" style="display:none">
+            <div class="col-md-4">
+                <img src="https://picsum.photos/640/360" class="BlogAuthors-DetailsDelete--Dim">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body BlogAuthors-DetailsDelete--CardBodyDim">
+                    <h5 class="card-title BlogAuthors-DetailsDelete--TextBlack">This is a blogPost</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<script>
+    function showAuthor(id) {
+        $(".AuthorSection-" + id ).show();
+        $(".BlogPostSection-" + id).hide();
+    }
+
+    function showBlogPost(id) {
+        $(".AuthorSection-" + id).hide();
+        $(".BlogPostSection-" + id).show();
+    }
+</script>
+
+

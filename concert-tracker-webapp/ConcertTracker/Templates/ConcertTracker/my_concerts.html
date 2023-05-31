@@ -1,0 +1,14 @@
+{% extends 'concert_base.html' %}
+{% load static %}
+{% block title %}My Concerts{% endblock %}
+{% block content %}
+	<h3>Your upcoming concerts:</h3>
+	<div id="list-div">
+		{% for item in info %}
+		<p>
+			{{ item }}
+			<a href="{% url 'concert_details' item.id %}">See details</a>
+		</p>
+		{% endfor %}
+	</div>
+{% endblock %}

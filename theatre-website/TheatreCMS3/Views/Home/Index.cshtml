@@ -1,0 +1,65 @@
+﻿@{
+  ViewBag.Title = "Home Page";
+}
+
+<div>
+    <img src="~/Content/images/TheatreLogo.png" alt="Theatre Vertigo Logo" class="home-index--main_logo img-fluid" />    <!-- Main Logo Top Center beneath NavBar-->
+</div>
+
+
+<div>
+    <!--LEFT COLUMN-->
+    <div class="home-index--column_1">
+        <h2 class="home-index--h2font">SPOTLIGHT</h2>
+        <hr class="home-index--hr">
+        <img src="~/Content/images/DollsHouse.png" alt="DollsHousePoster" class="home-index--posters" />
+        <img src="~/Content/images/Tempest.png" alt="TempestPoster" class="home-index--posters" />
+    </div>
+    <!--RIGHT COLUMN-->
+    <div class="home-index--column_2">
+        <h2>DONATIONS</h2>
+        <hr class="home-index--hr">
+        <button onclick="location.href='@Url.Action("Donate","Home")'" class="btn home-index--donations_btn" type="button">Click to Support</button>
+        <h2>SPONSORS</h2>
+        <hr class="home-index--hr">
+        <img src="~/Content/images/Sponsors/Ellyn-Bye-Logo.png" alt="Ellyn-Bye-Logo" class="home-index--sponsors" />
+        <img src="~/Content/images/Sponsors/LogoRoundColor.png" alt="LogoRoundColor" class="home-index--sponsors" />
+        <img src="~/Content/images/Sponsors/Ninkasi-white-text.png" alt="Ninkasi-white-text" class="home-index--sponsors" />
+        <img src="~/Content/images/Sponsors/OCF-logo-in-white-with-tagline-lg.png" alt="LOCF-logo-in-white-with-tagline-lg" class="home-index--sponsors" />
+        <img src="~/Content/images/Sponsors/RACC.png" alt="RACC" class="home-index--sponsors" />
+
+    </div>
+</div>
+
+<div>
+    <!--LEFT COLUMN-->
+    <div class="home-index--column_1">
+        <h2>LAND ACKNOWLEDGEMENT</h2>
+        <hr class="home-index--hr">
+        <br />
+        <br />
+        <p>
+            Theatre Vertigo humbly acknowledges we live and work on the unceded,
+            traditional tribal lands of the Multnomah, Wasco, Clackamas, Chinook bands,
+            Kathlamet, Tualatin Kalapuya, Cowlitz, Mollala, Cascades, Oregon City Tumwater,
+            Confederated Tribes of the Grand Ronde and other indigenous peoples.
+            <br /><br />
+            <strong>We are on stolen land.</strong>
+            <br /><br />
+            Theatre Vertigo has been and continues to examine our community relationships
+            to ensure our collaborators, partners and sponsors support the our regions
+            Indigenous Nations and communities.
+            <br /><br />
+            One of the ways Theatre Vertigo is working to act on our commitment to being
+            of service to the lands that we now share is to build bridges between our arts
+            community and local Nations.
+        </p>
+    </div>
+    <!--RIGHT COLUMN-->
+    <div class="home-index--column_2">
+        <a href="https://nayapdx.org" target="_blank"><img src="~/Content/images/NAYAFamilyCenter.jpg" alt="NAYAFamilyCenter" class="home-index--posters" /></a>
+        
+        <p>Click to visit the NAYA Family Center to learn more about supporting our local indigenous communities.</p>
+
+    </div>
+</div>

@@ -1,0 +1,115 @@
+﻿@model TheatreCMS3.Areas.Prod.Models.Production
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Production</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Playwright)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Playwright)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Runtime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Runtime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpeningDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClosingDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClosingDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowTimeEvening)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowTimeEvening)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowTimeMatinee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowTimeMatinee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorldPremiere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorldPremiere)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentlyShowing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentlyShowing)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

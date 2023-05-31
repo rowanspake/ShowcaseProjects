@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TheatreCMS3.Areas.Blog.Models.BlogPost>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="card mb-3" style="max-width: 100%;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img class="BlogPost-Index--img" src="https://th.bing.com/th?id=OIF.eL0PcLAnu%2fNeR4aDy65eOg&pid=ImgDet&rs=1" alt="Zelda" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="BlogPost_Index--card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
+                    <p class="BlogPost-Index--card-text">@Html.DisplayFor(modelItem => item.Content)</p>
+                    <p class="BlogPost-Index--card-time"><small class="text-muted">@Html.DisplayFor(modelItem => item.Posted)</small></p>
+                    <h4 class="BlogPost-Index--H4">@Html.DisplayFor(modelItem => item.Author)</h4>
+
+                    <div class="BlogPost-Index--bot-right">
+                        <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "BlogPosts", new { id=item.BlogPostId})'" class="BlogPost-Index--btn btn-success btn-sm" />
+                        <input type="button" value="Details" onclick="location.href='@Url.Action("Details", "BlogPosts", new { id=item.BlogPostId})'" class="BlogPost-Index--btn btn-secondary btn-sm" />
+                        <input type="button" value="Delete" onclick="location.href='@Url.Action("Delete", "BlogPosts", new { id=item.BlogPostId})'" class="BlogPost-Index--btn btn-danger btn-sm" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
